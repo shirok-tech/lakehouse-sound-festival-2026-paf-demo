@@ -1,0 +1,43 @@
+{
+  "format": "parquet",
+  "rows": 75,
+  "columns": [
+    {
+      "name": "performance_id",
+      "type_name": "string"
+    },
+    {
+      "name": "festival_date",
+      "type_name": "string"
+    },
+    {
+      "name": "stage_id",
+      "type_name": "string"
+    },
+    {
+      "name": "actual_start_ts",
+      "type_name": "string"
+    },
+    {
+      "name": "actual_end_ts",
+      "type_name": "string"
+    },
+    {
+      "name": "delay_minutes",
+      "type_name": "int64"
+    },
+    {
+      "name": "status",
+      "type_name": "string"
+    },
+    {
+      "name": "incident_id",
+      "type_name": "string"
+    },
+    {
+      "name": "cancellation_reason",
+      "type_name": "string"
+    }
+  ],
+  "writer": "NeoTone MiniParquet Writer 1.0"
+}

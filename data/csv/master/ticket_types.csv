@@ -1,0 +1,7 @@
+﻿ticket_type_id,ticket_type_name,valid_days,base_price_jpy,vip_flag,addon_flag
+DAY1,Day 1 Pass,2026-08-07,17000,0,0
+DAY2,Day 2 Pass,2026-08-08,18000,0,0
+DAY3,Day 3 Pass,2026-08-09,19000,0,0
+THREE_DAY,Three Day Pass,2026-08-07|2026-08-08|2026-08-09,42000,0,0
+VIP_THREE_DAY,VIP Three Day Pass,2026-08-07|2026-08-08|2026-08-09,78000,1,0
+MG_PREMIUM,Modular Garden Premium Add-on,2026-08-09,6000,0,1

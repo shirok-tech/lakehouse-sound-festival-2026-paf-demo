@@ -1,0 +1,39 @@
+{
+  "format": "parquet",
+  "rows": 810,
+  "columns": [
+    {
+      "name": "snapshot_id",
+      "type_name": "string"
+    },
+    {
+      "name": "snapshot_ts",
+      "type_name": "string"
+    },
+    {
+      "name": "festival_date",
+      "type_name": "string"
+    },
+    {
+      "name": "product_id",
+      "type_name": "string"
+    },
+    {
+      "name": "initial_stock",
+      "type_name": "int64"
+    },
+    {
+      "name": "units_sold",
+      "type_name": "int64"
+    },
+    {
+      "name": "on_hand_units",
+      "type_name": "int64"
+    },
+    {
+      "name": "stock_status",
+      "type_name": "string"
+    }
+  ],
+  "writer": "NeoTone MiniParquet Writer 1.0"
+}

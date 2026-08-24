@@ -1,0 +1,43 @@
+{
+  "format": "parquet",
+  "rows": 12325,
+  "columns": [
+    {
+      "name": "sensor_event_id",
+      "type_name": "string"
+    },
+    {
+      "name": "event_ts",
+      "type_name": "string"
+    },
+    {
+      "name": "festival_date",
+      "type_name": "string"
+    },
+    {
+      "name": "stage_id",
+      "type_name": "string"
+    },
+    {
+      "name": "equipment_id",
+      "type_name": "string"
+    },
+    {
+      "name": "metric_name",
+      "type_name": "string"
+    },
+    {
+      "name": "metric_value",
+      "type_name": "double"
+    },
+    {
+      "name": "unit",
+      "type_name": "string"
+    },
+    {
+      "name": "status",
+      "type_name": "string"
+    }
+  ],
+  "writer": "NeoTone MiniParquet Writer 1.0"
+}

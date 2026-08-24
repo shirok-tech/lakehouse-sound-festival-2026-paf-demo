@@ -1,0 +1,12 @@
+flowchart TB
+    U[Festival Operator] --> PAF[Private Agent Factory 26.4]
+    PAF --> SQL[Select AI / Data Analysis]
+    PAF --> RAG[Select AI RAG]
+    PAF --> ACT[Approved PL/SQL Tool]
+    SQL --> ADB[Autonomous AI Lakehouse]
+    RAG --> ADB
+    ADB --> PARQ[Object Storage: Parquet]
+    ADB --> CSV[Object Storage: CSV]
+    ADB --> JSON[Object Storage: JSONL]
+    ADB --> PDF[Object Storage: PDF]
+    ACT --> TASK[(Improvement Tasks)]

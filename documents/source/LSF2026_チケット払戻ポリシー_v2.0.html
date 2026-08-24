@@ -1,0 +1,99 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><title>チケット払戻ポリシー</title><style>
+@page { size: A4; margin: 23mm 18mm 21mm 18mm; }
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  color: #1b2730;
+  font-family: "Noto Sans CJK JP", "Noto Sans JP", sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.65;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.fixed-header {
+  position: fixed;
+  top: -17mm;
+  left: 0;
+  right: 0;
+  height: 12mm;
+  border-bottom: 1px solid #78a9b3;
+  color: #315c66;
+  font-size: 8pt;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.fixed-footer {
+  position: fixed;
+  bottom: -14mm;
+  left: 0;
+  right: 0;
+  height: 10mm;
+  border-top: 1px solid #b8cdd2;
+  color: #61757a;
+  font-size: 7.5pt;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cover {
+  min-height: 225mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  page-break-after: always;
+}
+.brand { color: #0f6b78; font-size: 11pt; font-weight: 700; letter-spacing: 0.08em; }
+h1 { margin: 10mm 0 4mm; font-size: 24pt; line-height: 1.25; color: #0b3d4a; }
+.subtitle { font-size: 13pt; color: #526b71; margin-bottom: 12mm; }
+.meta-grid {
+  display: grid;
+  grid-template-columns: 35mm 1fr;
+  gap: 0;
+  border-top: 2px solid #0f6b78;
+  border-bottom: 1px solid #aac7cd;
+  width: 100%;
+}
+.meta-grid div { padding: 3mm 2.5mm; border-bottom: 1px solid #dbe8eb; }
+.meta-label { font-weight: 700; background: #eef7f8; color: #315c66; }
+h2 { margin: 9mm 0 3mm; padding-bottom: 1.5mm; border-bottom: 2px solid #0f6b78; font-size: 16pt; color: #0b3d4a; page-break-after: avoid; }
+h3 { margin: 6mm 0 2mm; font-size: 12.5pt; color: #315c66; page-break-after: avoid; }
+p { margin: 0 0 3mm; }
+ul, ol { margin: 2mm 0 4mm 6mm; padding-left: 5mm; }
+li { margin-bottom: 1.5mm; }
+table { width: 100%; border-collapse: collapse; margin: 3mm 0 6mm; font-size: 9.2pt; page-break-inside: avoid; }
+th { background: #0b3d4a; color: white; text-align: left; padding: 2.6mm 2.4mm; font-weight: 700; }
+td { border-bottom: 1px solid #d2e1e4; padding: 2.3mm 2.4mm; vertical-align: top; }
+tr:nth-child(even) td { background: #f6fafb; }
+.callout { margin: 4mm 0 6mm; padding: 4mm; border-left: 4px solid #d88b2c; background: #fff6e9; page-break-inside: avoid; }
+.callout.critical { border-left-color: #b93b3b; background: #fff0f0; }
+.callout.info { border-left-color: #0f6b78; background: #eef7f8; }
+.kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3mm; margin: 4mm 0 6mm; page-break-inside: avoid; }
+.kpi { border: 1px solid #b9d2d7; border-radius: 2mm; padding: 4mm; background: #f6fbfc; }
+.kpi .value { display: block; font-size: 17pt; font-weight: 700; color: #0b3d4a; }
+.kpi .label { display: block; font-size: 8.5pt; color: #5d7479; margin-top: 1mm; }
+.code { font-family: "Noto Sans Mono CJK JP", monospace; background: #f2f5f6; padding: 3mm; border-radius: 1.5mm; white-space: pre-wrap; font-size: 9pt; }
+.page-break { page-break-before: always; }
+.small { font-size: 8.7pt; color: #5d6f74; }
+.status { display: inline-block; padding: 0.6mm 2mm; border-radius: 8mm; font-size: 8pt; font-weight: 700; background: #dff1e4; color: #27633a; }
+.status.warn { background: #fff0d8; color: #855514; }
+.status.critical { background: #ffe1e1; color: #8a2929; }
+.signature { margin-top: 12mm; display: grid; grid-template-columns: 1fr 1fr; gap: 12mm; }
+.signature div { border-top: 1px solid #71878c; padding-top: 2mm; font-size: 8.5pt; }
+</style></head><body>
+<div class="fixed-header"><span>Lakehouse Sound Festival 2026</span><span>TKT-REFUND-2.0</span></div>
+<div class="fixed-footer"><span>Internal / Synthetic Demo</span><span>Version 2.0 / Effective 2026-07-01</span></div>
+<section class="cover"><div class="brand">NEOTONE FESTIVAL OPERATIONS</div><h1>チケット払戻ポリシー</h1><div class="subtitle">悪天候・公演中止時の自動判定条件</div><div class="meta-grid"><div class="meta-label">Document ID</div><div>TKT-REFUND-2.0</div><div class="meta-label">Version</div><div>2.0</div><div class="meta-label">Effective Date</div><div>2026-07-01</div><div class="meta-label">Owner</div><div>Festival Operations Office</div><div class="meta-label">Classification</div><div>Internal / Synthetic Demo</div></div><div class="callout info" style="margin-top:12mm"><strong>架空文書</strong><br>本書はPrivate Agent FactoryおよびAutonomous AI Lakehouseの検証用に作成した完全合成データです。実在のイベント、製品、企業とは関係ありません。</div></section>
+
+<h2>1. 基本原則</h2>
+<p>払戻はチケット種別、対象日、入場記録、中止内容を組み合わせて判定する。申請理由だけでは自動承認しない。</p>
+<h2>2. 悪天候による部分中止</h2>
+<table><thead><tr><th>Ticket Type</th><th>Condition</th><th>Refund</th></tr></thead><tbody><tr><td>MG_PREMIUM</td><td>指定ヘッドライナーが中止</td><td>アドオン料金100%</td></tr><tr><td>DAY3</td><td>Day 3入場済み、屋外プログラムが90分超停止</td><td>購入額の15%</td></tr><tr><td>THREE_DAY</td><td>Day 3入場済み、屋外プログラムが90分超停止</td><td>購入額の5%</td></tr><tr><td>VIP_THREE_DAY</td><td>Day 3入場済み、屋外プログラムが90分超停止</td><td>購入額の5%</td></tr><tr><td>入場記録なし</td><td>全日中止ではない場合</td><td>自動返金せず手動確認</td></tr></tbody></table>
+<h2>3. 自動判定に必要なデータ</h2>
+<ul><li>ticket_idおよびparent_ticket_id</li><li>ticket_type_idと購入金額</li><li>対象日のSUCCESS入場ログ</li><li>公演のCANCELEDまたはENDED_EARLY状態</li><li>悪天候インシデントの継続時間</li></ul>
+<h2>4. 非対象</h2>
+<p>個人的事情、交通遅延、見たい公演の通常の時間変更は自動払戻対象外とする。例外申請はCustomer Supportが手動確認する。</p>
+<div class="callout info"><strong>金額計算</strong><br>返金額は100円単位へ丸める。アドオンはアドオン購入額を基準とし、親チケット金額を使用しない。</div>
+<h2>5. 承認</h2>
+<p>Agentは判定候補と計算根拠を提示できるが、実際の決済返金は承認ワークフローの完了後に行う。</p>
+</body></html>

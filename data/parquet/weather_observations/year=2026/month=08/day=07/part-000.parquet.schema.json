@@ -1,0 +1,51 @@
+{
+  "format": "parquet",
+  "rows": 57,
+  "columns": [
+    {
+      "name": "weather_event_id",
+      "type_name": "string"
+    },
+    {
+      "name": "observed_ts",
+      "type_name": "string"
+    },
+    {
+      "name": "festival_date",
+      "type_name": "string"
+    },
+    {
+      "name": "station_id",
+      "type_name": "string"
+    },
+    {
+      "name": "temperature_c",
+      "type_name": "double"
+    },
+    {
+      "name": "humidity_pct",
+      "type_name": "double"
+    },
+    {
+      "name": "wind_avg_mps",
+      "type_name": "double"
+    },
+    {
+      "name": "wind_gust_mps",
+      "type_name": "double"
+    },
+    {
+      "name": "rainfall_mm_15m",
+      "type_name": "double"
+    },
+    {
+      "name": "lightning_distance_km",
+      "type_name": "double"
+    },
+    {
+      "name": "weather_code",
+      "type_name": "string"
+    }
+  ],
+  "writer": "NeoTone MiniParquet Writer 1.0"
+}

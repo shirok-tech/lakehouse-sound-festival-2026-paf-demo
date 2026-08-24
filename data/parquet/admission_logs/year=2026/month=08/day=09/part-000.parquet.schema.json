@@ -1,0 +1,51 @@
+{
+  "format": "parquet",
+  "rows": 11602,
+  "columns": [
+    {
+      "name": "scan_id",
+      "type_name": "string"
+    },
+    {
+      "name": "event_ts",
+      "type_name": "string"
+    },
+    {
+      "name": "festival_date",
+      "type_name": "string"
+    },
+    {
+      "name": "gate_id",
+      "type_name": "string"
+    },
+    {
+      "name": "ticket_id",
+      "type_name": "string"
+    },
+    {
+      "name": "attendee_id",
+      "type_name": "string"
+    },
+    {
+      "name": "result_code",
+      "type_name": "string"
+    },
+    {
+      "name": "scan_duration_ms",
+      "type_name": "int64"
+    },
+    {
+      "name": "device_id",
+      "type_name": "string"
+    },
+    {
+      "name": "firmware_version",
+      "type_name": "string"
+    },
+    {
+      "name": "queue_estimate_minutes",
+      "type_name": "int64"
+    }
+  ],
+  "writer": "NeoTone MiniParquet Writer 1.0"
+}

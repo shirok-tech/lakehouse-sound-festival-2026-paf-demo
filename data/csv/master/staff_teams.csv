@@ -1,0 +1,12 @@
+﻿team_id,team_name,function,lead_role
+TEAM-NOC,Festival Network Operations,NETWORK,Network Lead
+TEAM-STAGE-WA,Waveform Arena Stage Team,STAGE,Stage Manager
+TEAM-STAGE-MG,Modular Garden Stage Team,STAGE,Stage Manager
+TEAM-GATE-A,North Gate Team,ADMISSION,Gate Supervisor
+TEAM-GATE-B,East Gate Team,ADMISSION,Gate Supervisor
+TEAM-GATE-C,Riverside Gate Team,ADMISSION,Gate Supervisor
+TEAM-GATE-V,VIP Gate Team,ADMISSION,VIP Supervisor
+TEAM-GATE-S,Staff Gate Team,ADMISSION,Security Supervisor
+TEAM-MERCH,Merchandise Operations,MERCHANDISE,Merchandise Manager
+TEAM-SAFETY,Festival Safety Office,SAFETY,Safety Director
+TEAM-CS,Customer Support,CUSTOMER_SUPPORT,Support Lead

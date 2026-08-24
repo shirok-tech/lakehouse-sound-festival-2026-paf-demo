@@ -1,0 +1,55 @@
+{
+  "format": "parquet",
+  "rows": 20800,
+  "columns": [
+    {
+      "name": "ticket_sale_id",
+      "type_name": "string"
+    },
+    {
+      "name": "ticket_id",
+      "type_name": "string"
+    },
+    {
+      "name": "parent_ticket_id",
+      "type_name": "string"
+    },
+    {
+      "name": "attendee_id",
+      "type_name": "string"
+    },
+    {
+      "name": "purchase_ts",
+      "type_name": "string"
+    },
+    {
+      "name": "ticket_type_id",
+      "type_name": "string"
+    },
+    {
+      "name": "sales_channel",
+      "type_name": "string"
+    },
+    {
+      "name": "amount_jpy",
+      "type_name": "int64"
+    },
+    {
+      "name": "discount_jpy",
+      "type_name": "int64"
+    },
+    {
+      "name": "payment_status",
+      "type_name": "string"
+    },
+    {
+      "name": "preferred_stage_id",
+      "type_name": "string"
+    },
+    {
+      "name": "wishlist_artist_id",
+      "type_name": "string"
+    }
+  ],
+  "writer": "NeoTone MiniParquet Writer 1.0"
+}

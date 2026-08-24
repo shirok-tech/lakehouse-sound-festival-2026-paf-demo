@@ -1,0 +1,6 @@
+﻿stage_id,stage_name,stage_type,capacity,location_zone,network_zone,weather_exposed_flag
+STG-OM,Orbit Main Stage,OUTDOOR_MAIN,12000,North Field,NET-A,1
+STG-WA,Waveform Arena,SEMI_INDOOR_DJ,8000,East Hangar,NET-B,0
+STG-NG,Neon Groove Stage,OUTDOOR_DJ,5000,Central Plaza,NET-C,1
+STG-MG,Modular Garden,OUTDOOR_DTM,3500,Riverside Lawn,NET-D,1
+STG-NP,Night Pulse Club,INDOOR_CLUB,2500,Warehouse 4,NET-E,0

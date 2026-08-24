@@ -1,0 +1,32 @@
+{
+  "wa_max_delay_minutes": 29,
+  "wa_avg_delay_minutes": 15.2,
+  "wa_affected_performances": 3,
+  "wa_affected_artists": [
+    "Circuit Bloom",
+    "Fader Ghost",
+    "Spectrum Taxi"
+  ],
+  "switch_max_temperature_c": 91.8,
+  "switch_max_temperature_c_raw": 91.755,
+  "switch_max_packet_loss_pct": 19.2,
+  "switch_max_packet_loss_pct_raw": 19.167,
+  "switch_min_fan_rpm": 120,
+  "switch_maintenance_overdue_days": 14,
+  "gate_c_attempts_in_window": 4659,
+  "gate_c_failures_in_window": 2859,
+  "gate_c_failure_rate_pct": 61.4,
+  "gate_c_average_queue_minutes": 29.6,
+  "gate_c_failover_delay_minutes": 16,
+  "lunar_hoodie_stockout_ts": "2026-08-08 17:40:00",
+  "lunar_hoodie_units_sold": 420,
+  "lunar_hoodie_planned_stock": 420,
+  "lunar_hoodie_interest_forecast": 690,
+  "lunar_hoodie_plan_gap_pct": 39.1,
+  "lunar_hoodie_negative_feedback_count": 250,
+  "weather_first_threshold_ts": "2026-08-09 18:00:00",
+  "refund_approved_count": 1300,
+  "refund_manual_review_count": 30,
+  "refund_denied_count": 170,
+  "refund_approved_total_jpy": 5126000
+}

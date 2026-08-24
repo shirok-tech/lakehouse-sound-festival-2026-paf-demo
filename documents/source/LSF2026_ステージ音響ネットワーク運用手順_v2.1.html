@@ -1,0 +1,99 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><title>ステージ音響ネットワーク運用手順</title><style>
+@page { size: A4; margin: 23mm 18mm 21mm 18mm; }
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  color: #1b2730;
+  font-family: "Noto Sans CJK JP", "Noto Sans JP", sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.65;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.fixed-header {
+  position: fixed;
+  top: -17mm;
+  left: 0;
+  right: 0;
+  height: 12mm;
+  border-bottom: 1px solid #78a9b3;
+  color: #315c66;
+  font-size: 8pt;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.fixed-footer {
+  position: fixed;
+  bottom: -14mm;
+  left: 0;
+  right: 0;
+  height: 10mm;
+  border-top: 1px solid #b8cdd2;
+  color: #61757a;
+  font-size: 7.5pt;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cover {
+  min-height: 225mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  page-break-after: always;
+}
+.brand { color: #0f6b78; font-size: 11pt; font-weight: 700; letter-spacing: 0.08em; }
+h1 { margin: 10mm 0 4mm; font-size: 24pt; line-height: 1.25; color: #0b3d4a; }
+.subtitle { font-size: 13pt; color: #526b71; margin-bottom: 12mm; }
+.meta-grid {
+  display: grid;
+  grid-template-columns: 35mm 1fr;
+  gap: 0;
+  border-top: 2px solid #0f6b78;
+  border-bottom: 1px solid #aac7cd;
+  width: 100%;
+}
+.meta-grid div { padding: 3mm 2.5mm; border-bottom: 1px solid #dbe8eb; }
+.meta-label { font-weight: 700; background: #eef7f8; color: #315c66; }
+h2 { margin: 9mm 0 3mm; padding-bottom: 1.5mm; border-bottom: 2px solid #0f6b78; font-size: 16pt; color: #0b3d4a; page-break-after: avoid; }
+h3 { margin: 6mm 0 2mm; font-size: 12.5pt; color: #315c66; page-break-after: avoid; }
+p { margin: 0 0 3mm; }
+ul, ol { margin: 2mm 0 4mm 6mm; padding-left: 5mm; }
+li { margin-bottom: 1.5mm; }
+table { width: 100%; border-collapse: collapse; margin: 3mm 0 6mm; font-size: 9.2pt; page-break-inside: avoid; }
+th { background: #0b3d4a; color: white; text-align: left; padding: 2.6mm 2.4mm; font-weight: 700; }
+td { border-bottom: 1px solid #d2e1e4; padding: 2.3mm 2.4mm; vertical-align: top; }
+tr:nth-child(even) td { background: #f6fafb; }
+.callout { margin: 4mm 0 6mm; padding: 4mm; border-left: 4px solid #d88b2c; background: #fff6e9; page-break-inside: avoid; }
+.callout.critical { border-left-color: #b93b3b; background: #fff0f0; }
+.callout.info { border-left-color: #0f6b78; background: #eef7f8; }
+.kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3mm; margin: 4mm 0 6mm; page-break-inside: avoid; }
+.kpi { border: 1px solid #b9d2d7; border-radius: 2mm; padding: 4mm; background: #f6fbfc; }
+.kpi .value { display: block; font-size: 17pt; font-weight: 700; color: #0b3d4a; }
+.kpi .label { display: block; font-size: 8.5pt; color: #5d7479; margin-top: 1mm; }
+.code { font-family: "Noto Sans Mono CJK JP", monospace; background: #f2f5f6; padding: 3mm; border-radius: 1.5mm; white-space: pre-wrap; font-size: 9pt; }
+.page-break { page-break-before: always; }
+.small { font-size: 8.7pt; color: #5d6f74; }
+.status { display: inline-block; padding: 0.6mm 2mm; border-radius: 8mm; font-size: 8pt; font-weight: 700; background: #dff1e4; color: #27633a; }
+.status.warn { background: #fff0d8; color: #855514; }
+.status.critical { background: #ffe1e1; color: #8a2929; }
+.signature { margin-top: 12mm; display: grid; grid-template-columns: 1fr 1fr; gap: 12mm; }
+.signature div { border-top: 1px solid #71878c; padding-top: 2mm; font-size: 8.5pt; }
+</style></head><body>
+<div class="fixed-header"><span>Lakehouse Sound Festival 2026</span><span>OPS-NET-2.1</span></div>
+<div class="fixed-footer"><span>Internal / Synthetic Demo</span><span>Version 2.1 / Effective 2026-07-20</span></div>
+<section class="cover"><div class="brand">NEOTONE FESTIVAL OPERATIONS</div><h1>ステージ音響ネットワーク運用手順</h1><div class="subtitle">DJリンク監視、閾値、フェイルオーバー</div><div class="meta-grid"><div class="meta-label">Document ID</div><div>OPS-NET-2.1</div><div class="meta-label">Version</div><div>2.1</div><div class="meta-label">Effective Date</div><div>2026-07-20</div><div class="meta-label">Owner</div><div>Festival Operations Office</div><div class="meta-label">Classification</div><div>Internal / Synthetic Demo</div></div><div class="callout info" style="margin-top:12mm"><strong>架空文書</strong><br>本書はPrivate Agent FactoryおよびAutonomous AI Lakehouseの検証用に作成した完全合成データです。実在のイベント、製品、企業とは関係ありません。</div></section>
+
+<h2>1. 対象システム</h2>
+<p>DJリンクネットワークはDJプレイヤー、DJミキサー、ステージ管理端末、時刻同期サーバーを専用VLANで接続する。各ステージには主系スイッチと予備スイッチを配置する。</p>
+<h2>2. 監視閾値</h2>
+<table><thead><tr><th>Metric</th><th>Warning</th><th>Critical</th><th>Required Action</th></tr></thead><tbody><tr><td>Packet Loss</td><td>2%超が3分</td><td>5%超が2分</td><td>主系を隔離し予備系へ切替</td></tr><tr><td>Switch Temperature</td><td>70 C以上</td><td>80 C以上</td><td>負荷確認、冷却確認、予備系準備</td></tr><tr><td>Cooling Fan</td><td>1,500 RPM未満</td><td>1,000 RPM未満</td><td>直ちに予備系へ切替</td></tr><tr><td>Audio Dropouts</td><td>1分に2回</td><td>1分に3回以上</td><td>DJリンクとプレイヤー状態を同時確認</td></tr></tbody></table>
+<h2>3. 障害対応手順</h2>
+<ol><li>NOCは監視画面でパケットロス、温度、ファン回転数を確認する。</li><li>DJプレイヤー本体を再起動する前に、スイッチとリンク状態を確認する。</li><li>Critical条件を満たした場合、5分以内に予備スイッチへDJリンクVLANを切り替える。</li><li>切替後、2台以上のDJプレイヤーで同期、波形更新、音声再生を確認する。</li><li>復旧しても対象機器は再利用せず、隔離してベンダー解析へ送る。</li></ol>
+<div class="callout"><strong>注意</strong><br>パケットロスとファン回転数低下が同時に発生している場合、DJプレイヤーの個別故障と断定しない。ネットワーク機器の冷却異常を優先して確認する。</div>
+<h2>4. Waveform Arena構成</h2>
+<table><thead><tr><th>Role</th><th>Equipment ID</th><th>Model</th><th>Standby</th></tr></thead><tbody><tr><td>Main Switch</td><td>EQ-NET-WA-01</td><td>PulseGrid StageLink 48</td><td>EQ-NET-WA-02</td></tr><tr><td>DJ Player A</td><td>EQ-DJP-WA-01</td><td>NeoTone PulseDeck M9</td><td>Hot Spare</td></tr><tr><td>DJ Player B</td><td>EQ-DJP-WA-02</td><td>NeoTone PulseDeck M9</td><td>Hot Spare</td></tr><tr><td>DJ Mixer</td><td>EQ-DJM-WA-01</td><td>NeoTone CrossFlow MX8</td><td>Bypass Input</td></tr></tbody></table>
+<h2>5. 記録項目</h2>
+<p>Incident ID、障害検知時刻、閾値到達時刻、切替開始・完了時刻、影響公演、対象ロット、保守状況を記録する。</p>
+</body></html>

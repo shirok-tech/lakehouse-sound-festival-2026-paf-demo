@@ -1,0 +1,6 @@
+﻿gate_id,gate_name,location_zone,normal_lanes,backup_lanes,primary_device_prefix,responsible_team_id
+GATE-A,North Gate,North Entrance,12,2,SCAN-A,TEAM-GATE-A
+GATE-B,East Gate,East Entrance,10,2,SCAN-B,TEAM-GATE-B
+GATE-C,Riverside Gate,Riverside Entrance,8,2,SCAN-C,TEAM-GATE-C
+GATE-V,VIP Gate,West Entrance,4,1,SCAN-V,TEAM-GATE-V
+GATE-S,Staff Gate,Service Entrance,3,1,SCAN-S,TEAM-GATE-S

@@ -1,0 +1,17 @@
+*.zip
+Wallet_*.zip
+*.pem
+*.key
+*.p12
+*.jks
+*.wallet
+.env
+.env.*
+credentials*
+auth_token*
+terraform.tfstate*
+.DS_Store
+__pycache__/
+*.pyc
+blog/private/
+tmp/

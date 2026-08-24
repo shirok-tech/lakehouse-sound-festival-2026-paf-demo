@@ -1,0 +1,59 @@
+{
+  "format": "parquet",
+  "rows": 24,
+  "columns": [
+    {
+      "name": "incident_id",
+      "type_name": "string"
+    },
+    {
+      "name": "festival_date",
+      "type_name": "string"
+    },
+    {
+      "name": "location_id",
+      "type_name": "string"
+    },
+    {
+      "name": "category",
+      "type_name": "string"
+    },
+    {
+      "name": "severity",
+      "type_name": "string"
+    },
+    {
+      "name": "start_ts",
+      "type_name": "string"
+    },
+    {
+      "name": "end_ts",
+      "type_name": "string"
+    },
+    {
+      "name": "title",
+      "type_name": "string"
+    },
+    {
+      "name": "impacted_people",
+      "type_name": "int64"
+    },
+    {
+      "name": "related_equipment_id",
+      "type_name": "string"
+    },
+    {
+      "name": "status",
+      "type_name": "string"
+    },
+    {
+      "name": "document_id",
+      "type_name": "string"
+    },
+    {
+      "name": "summary",
+      "type_name": "string"
+    }
+  ],
+  "writer": "NeoTone MiniParquet Writer 1.0"
+}

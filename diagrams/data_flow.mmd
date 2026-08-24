@@ -1,0 +1,15 @@
+flowchart LR
+    T[Ticket Sales] --> G[Gate Analysis]
+    A[Admission Logs] --> G
+    P[Performance Schedule / Actual] --> D[Delay Analysis]
+    S[Equipment Sensor Logs] --> D
+    M[Maintenance] --> D
+    MS[Merchandise Sales] --> I[Stockout Analysis]
+    IS[Interest Signals] --> I
+    W[Weather] --> R[Refund Analysis]
+    RR[Refund Requests] --> R
+    DOC[PDF Documents] --> ROOT[Root Cause and Policy Evidence]
+    G --> ROOT
+    D --> ROOT
+    I --> ROOT
+    R --> ROOT

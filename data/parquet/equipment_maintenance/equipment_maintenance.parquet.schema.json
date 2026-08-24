@@ -1,0 +1,39 @@
+{
+  "format": "parquet",
+  "rows": 40,
+  "columns": [
+    {
+      "name": "maintenance_id",
+      "type_name": "string"
+    },
+    {
+      "name": "equipment_id",
+      "type_name": "string"
+    },
+    {
+      "name": "scheduled_date",
+      "type_name": "string"
+    },
+    {
+      "name": "completed_date",
+      "type_name": "string"
+    },
+    {
+      "name": "maintenance_type",
+      "type_name": "string"
+    },
+    {
+      "name": "status",
+      "type_name": "string"
+    },
+    {
+      "name": "vendor_id",
+      "type_name": "string"
+    },
+    {
+      "name": "notes",
+      "type_name": "string"
+    }
+  ],
+  "writer": "NeoTone MiniParquet Writer 1.0"
+}

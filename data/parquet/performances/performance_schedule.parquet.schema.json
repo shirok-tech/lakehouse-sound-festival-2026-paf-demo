@@ -1,0 +1,51 @@
+{
+  "format": "parquet",
+  "rows": 75,
+  "columns": [
+    {
+      "name": "performance_id",
+      "type_name": "string"
+    },
+    {
+      "name": "festival_date",
+      "type_name": "string"
+    },
+    {
+      "name": "stage_id",
+      "type_name": "string"
+    },
+    {
+      "name": "artist_id",
+      "type_name": "string"
+    },
+    {
+      "name": "artist_name",
+      "type_name": "string"
+    },
+    {
+      "name": "genre",
+      "type_name": "string"
+    },
+    {
+      "name": "planned_start_ts",
+      "type_name": "string"
+    },
+    {
+      "name": "planned_end_ts",
+      "type_name": "string"
+    },
+    {
+      "name": "planned_duration_minutes",
+      "type_name": "int64"
+    },
+    {
+      "name": "slot_index",
+      "type_name": "int64"
+    },
+    {
+      "name": "headline_flag",
+      "type_name": "int64"
+    }
+  ],
+  "writer": "NeoTone MiniParquet Writer 1.0"
+}

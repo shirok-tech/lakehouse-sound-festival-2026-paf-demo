@@ -1,0 +1,9 @@
+﻿vendor_id,vendor_name,vendor_type,country,support_level
+VND-001,NeoTone Stage Systems,STAGE_INTEGRATOR,Japan,24X7
+VND-002,PulseGrid Networks,NETWORK,Japan,24X7
+VND-003,BrightLine Audio,PA_AUDIO,Japan,EVENT
+VND-004,GateFlow Devices,ACCESS_CONTROL,Japan,EVENT
+VND-005,CloudMerch Works,MERCHANDISE,Japan,BUSINESS_HOURS
+VND-006,SkyWatch Safety,WEATHER,Japan,24X7
+VND-007,VoltRiver Power,POWER,Japan,24X7
+VND-008,LoopTransit Logistics,LOGISTICS,Japan,EVENT

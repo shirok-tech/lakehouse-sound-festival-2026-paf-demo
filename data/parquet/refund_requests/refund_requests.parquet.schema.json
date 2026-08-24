@@ -1,0 +1,43 @@
+{
+  "format": "parquet",
+  "rows": 1500,
+  "columns": [
+    {
+      "name": "request_id",
+      "type_name": "string"
+    },
+    {
+      "name": "ticket_id",
+      "type_name": "string"
+    },
+    {
+      "name": "parent_ticket_id",
+      "type_name": "string"
+    },
+    {
+      "name": "attendee_id",
+      "type_name": "string"
+    },
+    {
+      "name": "request_ts",
+      "type_name": "string"
+    },
+    {
+      "name": "reason_code",
+      "type_name": "string"
+    },
+    {
+      "name": "requested_amount_jpy",
+      "type_name": "int64"
+    },
+    {
+      "name": "customer_comment",
+      "type_name": "string"
+    },
+    {
+      "name": "review_status",
+      "type_name": "string"
+    }
+  ],
+  "writer": "NeoTone MiniParquet Writer 1.0"
+}
