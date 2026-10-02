@@ -824,7 +824,7 @@ def generate_incidents_and_actions() -> tuple[list[dict[str, Any]], list[dict[st
         {
             "incident_id": "INC-2026-091", "festival_date": "2026-08-09", "location_id": "STG-MG", "category": "SEVERE_WEATHER", "severity": "HIGH",
             "start_ts": "2026-08-09 18:05:00", "end_ts": "2026-08-09 21:00:00", "title": "Modular Garden悪天候運用停止",
-            "impacted_people": 3500, "related_equipment_id": "", "status": "CLOSED", "document_id": "WX-2026-009",
+            "impacted_people": 3500, "related_equipment_id": "", "status": "CLOSED", "document_id": "",
             "summary": "雷距離と瞬間風速が停止基準を超過し、屋外ステージを停止。Lunar Echo公演を中止。",
         },
         {

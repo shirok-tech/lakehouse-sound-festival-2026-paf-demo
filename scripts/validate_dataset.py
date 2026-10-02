@@ -47,6 +47,15 @@ def main() -> int:
     check("refund_requests", len(refunds), 1500, failures)
     check("RAG PDFs", len(list(PDF.glob("*.pdf"))), 10, failures)
 
+    incidents = rows("incidents.csv")
+    with (ROOT / "metadata" / "document_catalog.csv").open(encoding="utf-8-sig", newline="") as stream:
+        document_ids = {r["document_id"] for r in csv.DictReader(stream)}
+    invalid_refs = [(r["incident_id"], r["document_id"]) for r in incidents
+                    if r["document_id"] and r["document_id"] not in document_ids]
+    check("Incident document references", invalid_refs, [], failures)
+    weather_incidents = [r["document_id"] for r in incidents if r["incident_id"] == "INC-2026-091"]
+    check("INC-2026-091 document reference", weather_incidents, [""], failures)
+
     delayed = [r for r in actual if r["incident_id"] == "INC-2026-081"]
     check("Waveform affected performances", len(delayed), 3, failures)
     check("Waveform performance IDs", [r["performance_id"] for r in delayed], ["PERF-0033", "PERF-0034", "PERF-0035"], failures)

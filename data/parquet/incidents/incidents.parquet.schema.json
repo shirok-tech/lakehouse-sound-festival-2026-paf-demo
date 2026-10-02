@@ -4,56 +4,69 @@
   "columns": [
     {
       "name": "incident_id",
-      "type_name": "string"
+      "type_name": "string",
+      "nullable": false
     },
     {
       "name": "festival_date",
-      "type_name": "string"
+      "type_name": "string",
+      "nullable": false
     },
     {
       "name": "location_id",
-      "type_name": "string"
+      "type_name": "string",
+      "nullable": false
     },
     {
       "name": "category",
-      "type_name": "string"
+      "type_name": "string",
+      "nullable": false
     },
     {
       "name": "severity",
-      "type_name": "string"
+      "type_name": "string",
+      "nullable": false
     },
     {
       "name": "start_ts",
-      "type_name": "string"
+      "type_name": "string",
+      "nullable": false
     },
     {
       "name": "end_ts",
-      "type_name": "string"
+      "type_name": "string",
+      "nullable": false
     },
     {
       "name": "title",
-      "type_name": "string"
+      "type_name": "string",
+      "nullable": false
     },
     {
       "name": "impacted_people",
-      "type_name": "int64"
+      "type_name": "int64",
+      "nullable": false
     },
     {
       "name": "related_equipment_id",
-      "type_name": "string"
+      "type_name": "string",
+      "nullable": false
     },
     {
       "name": "status",
-      "type_name": "string"
+      "type_name": "string",
+      "nullable": false
     },
     {
       "name": "document_id",
-      "type_name": "string"
+      "type_name": "string",
+      "nullable": true
     },
     {
       "name": "summary",
-      "type_name": "string"
+      "type_name": "string",
+      "nullable": false
     }
   ],
-  "writer": "NeoTone MiniParquet Writer 1.0"
+  "writer": "Apache Arrow 25.0.1"
 }
