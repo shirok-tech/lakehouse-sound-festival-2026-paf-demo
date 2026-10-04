@@ -72,8 +72,8 @@ SELECT
 FROM ext_refund_requests r
 JOIN ext_ticket_sales t ON t.ticket_id = r.ticket_id;
 
-COMMENT ON VIEW V_STAGE_DELAY_ANALYSIS IS '公演予定と実績を結合し、遅延時間と関連インシデントを分析するAgent向けView';
-COMMENT ON VIEW V_EQUIPMENT_HEALTH_SUMMARY IS '機器・指標単位の最小、最大、平均、異常イベント数';
-COMMENT ON VIEW V_GATE_CONGESTION_ANALYSIS IS 'ゲート別のスキャン結果、処理時間、待ち時間';
-COMMENT ON VIEW V_MERCH_STOCKOUT_ANALYSIS IS '物販計画、関心予測、在庫切れ時刻を比較するView';
-COMMENT ON VIEW V_REFUND_REQUEST_CONTEXT IS '払戻申請、チケット種別、Day 3入場有無をまとめたView';
+COMMENT ON TABLE V_STAGE_DELAY_ANALYSIS IS '公演予定と実績を結合し、遅延時間と関連インシデントを分析するAgent向けView';
+COMMENT ON TABLE V_EQUIPMENT_HEALTH_SUMMARY IS '機器・指標単位の最小、最大、平均、異常イベント数';
+COMMENT ON TABLE V_GATE_CONGESTION_ANALYSIS IS 'ゲート別のスキャン結果、処理時間、待ち時間';
+COMMENT ON TABLE V_MERCH_STOCKOUT_ANALYSIS IS '物販計画、関心予測、在庫切れ時刻を比較するView';
+COMMENT ON TABLE V_REFUND_REQUEST_CONTEXT IS '払戻申請、チケット種別、Day 3入場有無をまとめたView';
