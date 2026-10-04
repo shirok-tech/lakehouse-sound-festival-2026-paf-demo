@@ -1,3 +1,4 @@
+-- Run as ADB_USER.
 -- Existing tables are reused; no DROP/TRUNCATE is performed.
 DECLARE
   L_COUNT PLS_INTEGER;

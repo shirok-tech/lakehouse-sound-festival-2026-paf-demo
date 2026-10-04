@@ -13,7 +13,7 @@ SET SERVEROUTPUT ON
 @@05_verify_demo_data.sql
 
 PROMPT Ontology demo data preparation completed.
-PROMPT Continue with the blog Graph views, integrity checks, Graph and API steps.
+PROMPT Continue with 07_create_node_views.sql, 08_create_edge_views.sql and the documented Graph/API sequence.
 SET DEFINE ON
 WHENEVER SQLERROR CONTINUE NONE
 WHENEVER OSERROR CONTINUE NONE

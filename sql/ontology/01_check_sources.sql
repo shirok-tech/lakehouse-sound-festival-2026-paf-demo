@@ -1,3 +1,4 @@
+-- Run as ADB_USER.
 -- Stop before DDL or seed changes if the required source data is missing.
 DECLARE
   L_COUNT PLS_INTEGER;

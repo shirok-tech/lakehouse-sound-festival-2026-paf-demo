@@ -1,0 +1,23 @@
+{
+  "baseline_commit": "5c1858428f311b31adbff5aa0c646f780f81594d",
+  "rows": 24,
+  "columns": 13,
+  "logical_changes": [
+    [
+      "INC-2026-091",
+      "document_id",
+      "WX-2026-009",
+      null
+    ]
+  ],
+  "schema_change": "document_id remains string and becomes nullable; other fields unchanged",
+  "csv_parquet_match": true,
+  "nonempty_document_references_resolve": true,
+  "oracle_database_execution": "Not executed in this environment",
+  "oci_upload": "Not executed in this environment",
+  "files": {
+    "data/csv/transactions/incidents.csv": "f8153e16982b6eadb0bd57eaf41ac1f0eb6d043f1c2eb5391ce6828472949768",
+    "data/parquet/incidents/incidents.parquet": "4101a1f5e8869e5d7b83c0e782b2dbd6053b0ce3df4b51c12e66d9671964d5a8",
+    "data/parquet/incidents/incidents.parquet.schema.json": "eb6eb9a0b117bf61cb6ee1077300c9d3e0aef4ed76e800a64e435a0b8efd09e8"
+  }
+}

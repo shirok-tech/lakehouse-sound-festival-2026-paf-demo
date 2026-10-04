@@ -1,3 +1,4 @@
+-- Run as ADB_USER.
 -- Data preparation checks. Full graph source/edge checks remain in the blog.
 DECLARE
   L_COUNT PLS_INTEGER;

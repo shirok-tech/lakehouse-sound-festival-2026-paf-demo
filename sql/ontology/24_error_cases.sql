@@ -1,0 +1,31 @@
+-- Run as ADB_USER.
+
+-- Extracted from blog v1.3 lines 3208-3236; console output omitted.
+
+SET SERVEROUTPUT ON
+
+DECLARE
+  PROCEDURE EXPECT_ERROR (
+    P_ID IN VARCHAR2,
+    P_EXPECTED_CODE IN NUMBER
+  ) AS
+    L_RESULT CLOB;
+  BEGIN
+    BEGIN
+      LSF_KG_API.GET_INCIDENT_IMPACT(P_ID, L_RESULT);
+    EXCEPTION
+      WHEN OTHERS THEN
+        IF SQLCODE = P_EXPECTED_CODE THEN
+          DBMS_OUTPUT.PUT_LINE(P_ID || ': expected error PASS');
+          RETURN;
+        ELSE
+          RAISE;
+        END IF;
+    END;
+    RAISE_APPLICATION_ERROR(-20041, 'Expected API error was not raised');
+  END EXPECT_ERROR;
+BEGIN
+  EXPECT_ERROR('INVALID-ID', -20011);
+  EXPECT_ERROR('INC-UNKNOWN-999', -20012);
+END;
+/

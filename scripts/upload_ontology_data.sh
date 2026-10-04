@@ -18,6 +18,7 @@ fi
 FILES=(
   "data/csv/transactions/incidents.csv"
   "data/parquet/incidents/incidents.parquet"
+  "metadata/document_catalog.csv"
 )
 for relative_path in "${FILES[@]}"; do
   test -s "$ROOT_DIR/$relative_path"
@@ -37,4 +38,4 @@ for relative_path in "${FILES[@]}"; do
   fi
 done
 
-echo "Completed. Check EXT_INCIDENTS, then run sql/ontology/00_apply_demo_data.sql."
+echo "Completed. Check EXT_INCIDENTS and EXT_DOCUMENT_CATALOG before running ontology SQL."

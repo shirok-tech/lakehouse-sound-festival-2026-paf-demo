@@ -2,6 +2,14 @@
 
 Autonomous AI Lakehouse、Autonomous AI Database、Select AI、Private Agent Factory (PAF) を使い、音楽フェス運営を分析する再現可能なハンズオンです。
 
+## Ontology続編
+
+今回の完成済みデータと本編SQLは [Ontology再現手順](docs/ontology-data-setup.md) にまとめました。前回環境がある場合は、`scripts/upload_ontology_data.sh` で修正済みIncident CSV・Parquetと日本語名Catalogを同じObject名へ上書きし、同手順のADMIN → ADB_USER → LSF_AGENTの順で実行します。初回構築の場合は、このREADMEの基盤手順を先に完了します。
+
+`sql/ontology/` にRelation、Location Scope、Node/Edge View、Source/Key/Endpoint検査、SQL Property Graph、LSF_KG_API、3 Wrapper、分析用`V_KG_INCIDENT_FACTS`、APIと条件変更テスト、Graph Studio Queryを収録しています。`metadata/document_pdf_mapping.csv` は日本語名Catalogと`documents/pdf_ascii/`のASCII名をDocument IDで結びます。`INC-2026-091` の未解決な`WX-2026-009`参照は、完成済みParquet上でNULLです。
+
+本編のPAFは既存Select AI RAGを再利用します。文書の再取り込みやHard KG-guided RAGは必須手順ではありません。Graph Studioでは6 Vertex定義・8 Edge定義と、`INC-2026-081`から同Lotの別機材へ至る2経路を可視化します。
+
 ## Overview
 
 Lakehouse Sound Festival 2026 は、2026-08-07から2026-08-09に NeoTone Bay Park で開催された架空イベントです。すべてのデータ、人物、組織、製品、文書は完全合成であり、実在の人物・企業・イベントとは無関係です。乱数シードは `20260807`、すべての時刻は Asia/Tokyo です。
@@ -29,7 +37,7 @@ documents/pdf_ascii/  RAG投入専用のASCII名Text PDF 10件
 documents/source/     PDF原稿
 sql/                  External Table、View、権限、Procedure
 agent/                PAF設定、テスト質問、最終Custom Instructions
-metadata/             文書カタログと用語集
+metadata/             文書カタログ、Document ID別PDF名対応、用語集
 validation/           人間の正解照合用（アップロード・RAG投入禁止）
 generator/            同一Seedでの再生成器
 scripts/              uploadとローカル検証
@@ -47,9 +55,10 @@ scripts/              uploadとローカル検証
 ## 1. Clone Repository
 
 ```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
-cd lakehouse_sound_festival_2026
+git clone https://github.com/shirok-tech/lakehouse-sound-festival-2026-paf-demo.git
+cd lakehouse-sound-festival-2026-paf-demo
 python3 scripts/validate_dataset.py
+python3 scripts/validate_ontology.py
 ```
 
 ## 2. Configure OCI Variables
@@ -83,7 +92,7 @@ ADB_USERとして `sql/00_variables.sql`、`02_create_parquet_external_tables.sq
 
 ## 7. Create Runtime User and Action Procedure
 
-`sql/05_create_agent_readonly_user.sql` で `LSF_AGENT` を作成し、`sql/06_create_action_procedure.sql` をDB管理者権限で実行します。後者は `ADB_USER.CREATE_LSF_IMPROVEMENT_TASK` と、DMLをせず前者だけを呼ぶ `LSF_AGENT.CREATE_LSF_IMPROVEMENT_TASK` を作成します。Priorityは LOW / MEDIUM / HIGH / CRITICALのみです。
+ADMINで`sql/05_create_agent_readonly_user.sql`を実行し、ADB_USERで`sql/05_grant_agent_readonly.sql`と`sql/06_create_action_procedure.sql`を実行します。前回の書込みActionデモを使う場合だけ、LSF_AGENTで`sql/06_create_action_wrapper.sql`を実行します。Ontology FlowではこのActionを選択しません。
 
 ## 8. Create Select AI Profiles
 

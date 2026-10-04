@@ -1,11 +1,11 @@
 ﻿document_id,file_name,document_type,version,effective_date,purpose
-OPS-GEN-1.3,LSF2026_operations_management_manual_v1.3.pdf,Operations Manual,1.3,2026-07-15,インシデント区分、指揮系統、記録ルール
-OPS-NET-2.1,LSF2026_stage_audio_network_operations_v2.1.pdf,Runbook,2.1,2026-07-20,DJリンク、パケットロス、温度、フェイルオーバー手順
-OPS-GATE-1.2,LSF2026_admission_gate_incident_response_v1.2.pdf,Runbook,1.2,2026-07-18,QR障害閾値とバックアップ切替
-TKT-REFUND-2.0,LSF2026_ticket_refund_policy_v2.0.pdf,Policy,2.0,2026-07-01,中止・悪天候時の払戻条件
-WX-PLAN-1.4,LSF2026_severe_weather_contingency_plan_v1.4.pdf,Safety Plan,1.4,2026-07-10,雷・風・雨による停止基準
-IR-2026-081,IR-2026-081_waveform_arena_delay_report.pdf,Incident Report,1.0,2026-08-10,Waveform Arena遅延の事実と原因
-SB-NW-2603,SB-NW-2603_network_switch_cooling_fan_bulletin.pdf,Service Bulletin,1.1,2026-07-12,対象ロットの冷却ファン問題
-IR-2026-084,IR-2026-084_gate_c_congestion_report.pdf,Incident Report,1.0,2026-08-10,Gate C障害と切替遅延
-MIN-MERCH-2026-04,LSF2026_merchandise_inventory_planning_minutes.pdf,Meeting Minutes,1.0,2026-08-02,関心シグナルと在庫計画の差
-OPS-ACT-1.0,LSF2026_improvement_task_registration_procedure.pdf,Procedure,1.0,2026-07-25,承認後に改善タスクを登録する手順
+OPS-GEN-1.3,LSF2026_運営統括マニュアル_v1.3.pdf,Operations Manual,1.3,2026-07-15,インシデント区分、指揮系統、記録ルール
+OPS-NET-2.1,LSF2026_ステージ音響ネットワーク運用手順_v2.1.pdf,Runbook,2.1,2026-07-20,DJリンク、パケットロス、温度、フェイルオーバー手順
+OPS-GATE-1.2,LSF2026_入場ゲート障害対応手順_v1.2.pdf,Runbook,1.2,2026-07-18,QR障害閾値とバックアップ切替
+TKT-REFUND-2.0,LSF2026_チケット払戻ポリシー_v2.0.pdf,Policy,2.0,2026-07-01,中止・悪天候時の払戻条件
+WX-PLAN-1.4,LSF2026_悪天候対応計画_v1.4.pdf,Safety Plan,1.4,2026-07-10,雷・風・雨による停止基準
+IR-2026-081,IR-2026-081_Waveform_Arena遅延報告.pdf,Incident Report,1.0,2026-08-10,Waveform Arena遅延の事実と原因
+SB-NW-2603,SB-NW-2603_ネットワークスイッチ冷却ファン通知.pdf,Service Bulletin,1.1,2026-07-12,対象ロットの冷却ファン問題
+IR-2026-084,IR-2026-084_Gate_C混雑報告.pdf,Incident Report,1.0,2026-08-10,Gate C障害と切替遅延
+MIN-MERCH-2026-04,LSF2026_物販売上在庫計画会議議事録.pdf,Meeting Minutes,1.0,2026-08-02,関心シグナルと在庫計画の差
+OPS-ACT-1.0,LSF2026_改善タスク登録手順.pdf,Procedure,1.0,2026-07-25,承認後に改善タスクを登録する手順

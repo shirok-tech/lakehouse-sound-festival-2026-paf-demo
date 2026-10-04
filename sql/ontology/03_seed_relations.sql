@@ -1,3 +1,4 @@
+-- Run as ADB_USER.
 -- Re-running resets only the two ONTOLOGY_DEMO_SEED tasks to OPEN.
 MERGE INTO LSF_KG_LOT_PATCH T
 USING (

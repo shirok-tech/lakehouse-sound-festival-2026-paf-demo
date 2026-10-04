@@ -1,12 +1,6 @@
--- Create a least-privilege user for Data Analysis Agent.
--- Run as the ADB_USER owner. Replace only this placeholder in your local session;
+-- Run once as ADMIN to create the least-privilege runtime user.
+-- Replace only this placeholder in your local session;
 -- never commit the resulting password or a Wallet.
 CREATE USER &AGENT_SCHEMA IDENTIFIED BY "<LSF_AGENT_PASSWORD>";
 GRANT CREATE SESSION TO &AGENT_SCHEMA;
-GRANT SELECT ON V_STAGE_DELAY_ANALYSIS TO &AGENT_SCHEMA;
-GRANT SELECT ON V_EQUIPMENT_HEALTH_SUMMARY TO &AGENT_SCHEMA;
-GRANT SELECT ON V_GATE_CONGESTION_ANALYSIS TO &AGENT_SCHEMA;
-GRANT SELECT ON V_MERCH_STOCKOUT_ANALYSIS TO &AGENT_SCHEMA;
-GRANT SELECT ON V_REFUND_REQUEST_CONTEXT TO &AGENT_SCHEMA;
-GRANT SELECT ON EXT_INCIDENTS TO &AGENT_SCHEMA;
-GRANT SELECT ON EXT_WEATHER_OBSERVATIONS TO &AGENT_SCHEMA;
+-- Run sql/05_grant_agent_readonly.sql separately as ADB_USER.

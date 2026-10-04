@@ -1424,22 +1424,31 @@ def create_data_dictionary(masters: dict[str, list[dict[str, Any]]], metrics: di
 
 def get_document_catalog() -> list[dict[str, str]]:
     return [
-        {"document_id": "OPS-GEN-1.3", "file_name": "LSF2026_operations_management_manual_v1.3.pdf", "document_type": "Operations Manual", "version": "1.3", "effective_date": "2026-07-15", "purpose": "インシデント区分、指揮系統、記録ルール"},
-        {"document_id": "OPS-NET-2.1", "file_name": "LSF2026_stage_audio_network_operations_v2.1.pdf", "document_type": "Runbook", "version": "2.1", "effective_date": "2026-07-20", "purpose": "DJリンク、パケットロス、温度、フェイルオーバー手順"},
-        {"document_id": "OPS-GATE-1.2", "file_name": "LSF2026_admission_gate_incident_response_v1.2.pdf", "document_type": "Runbook", "version": "1.2", "effective_date": "2026-07-18", "purpose": "QR障害閾値とバックアップ切替"},
-        {"document_id": "TKT-REFUND-2.0", "file_name": "LSF2026_ticket_refund_policy_v2.0.pdf", "document_type": "Policy", "version": "2.0", "effective_date": "2026-07-01", "purpose": "中止・悪天候時の払戻条件"},
-        {"document_id": "WX-PLAN-1.4", "file_name": "LSF2026_severe_weather_contingency_plan_v1.4.pdf", "document_type": "Safety Plan", "version": "1.4", "effective_date": "2026-07-10", "purpose": "雷・風・雨による停止基準"},
-        {"document_id": "IR-2026-081", "file_name": "IR-2026-081_waveform_arena_delay_report.pdf", "document_type": "Incident Report", "version": "1.0", "effective_date": "2026-08-10", "purpose": "Waveform Arena遅延の事実と原因"},
-        {"document_id": "SB-NW-2603", "file_name": "SB-NW-2603_network_switch_cooling_fan_bulletin.pdf", "document_type": "Service Bulletin", "version": "1.1", "effective_date": "2026-07-12", "purpose": "対象ロットの冷却ファン問題"},
-        {"document_id": "IR-2026-084", "file_name": "IR-2026-084_gate_c_congestion_report.pdf", "document_type": "Incident Report", "version": "1.0", "effective_date": "2026-08-10", "purpose": "Gate C障害と切替遅延"},
-        {"document_id": "MIN-MERCH-2026-04", "file_name": "LSF2026_merchandise_inventory_planning_minutes.pdf", "document_type": "Meeting Minutes", "version": "1.0", "effective_date": "2026-08-02", "purpose": "関心シグナルと在庫計画の差"},
-        {"document_id": "OPS-ACT-1.0", "file_name": "LSF2026_improvement_task_registration_procedure.pdf", "document_type": "Procedure", "version": "1.0", "effective_date": "2026-07-25", "purpose": "承認後に改善タスクを登録する手順"},
+        {"document_id": "OPS-GEN-1.3", "file_name": "LSF2026_運営統括マニュアル_v1.3.pdf", "document_type": "Operations Manual", "version": "1.3", "effective_date": "2026-07-15", "purpose": "インシデント区分、指揮系統、記録ルール"},
+        {"document_id": "OPS-NET-2.1", "file_name": "LSF2026_ステージ音響ネットワーク運用手順_v2.1.pdf", "document_type": "Runbook", "version": "2.1", "effective_date": "2026-07-20", "purpose": "DJリンク、パケットロス、温度、フェイルオーバー手順"},
+        {"document_id": "OPS-GATE-1.2", "file_name": "LSF2026_入場ゲート障害対応手順_v1.2.pdf", "document_type": "Runbook", "version": "1.2", "effective_date": "2026-07-18", "purpose": "QR障害閾値とバックアップ切替"},
+        {"document_id": "TKT-REFUND-2.0", "file_name": "LSF2026_チケット払戻ポリシー_v2.0.pdf", "document_type": "Policy", "version": "2.0", "effective_date": "2026-07-01", "purpose": "中止・悪天候時の払戻条件"},
+        {"document_id": "WX-PLAN-1.4", "file_name": "LSF2026_悪天候対応計画_v1.4.pdf", "document_type": "Safety Plan", "version": "1.4", "effective_date": "2026-07-10", "purpose": "雷・風・雨による停止基準"},
+        {"document_id": "IR-2026-081", "file_name": "IR-2026-081_Waveform_Arena遅延報告.pdf", "document_type": "Incident Report", "version": "1.0", "effective_date": "2026-08-10", "purpose": "Waveform Arena遅延の事実と原因"},
+        {"document_id": "SB-NW-2603", "file_name": "SB-NW-2603_ネットワークスイッチ冷却ファン通知.pdf", "document_type": "Service Bulletin", "version": "1.1", "effective_date": "2026-07-12", "purpose": "対象ロットの冷却ファン問題"},
+        {"document_id": "IR-2026-084", "file_name": "IR-2026-084_Gate_C混雑報告.pdf", "document_type": "Incident Report", "version": "1.0", "effective_date": "2026-08-10", "purpose": "Gate C障害と切替遅延"},
+        {"document_id": "MIN-MERCH-2026-04", "file_name": "LSF2026_物販売上在庫計画会議議事録.pdf", "document_type": "Meeting Minutes", "version": "1.0", "effective_date": "2026-08-02", "purpose": "関心シグナルと在庫計画の差"},
+        {"document_id": "OPS-ACT-1.0", "file_name": "LSF2026_改善タスク登録手順.pdf", "document_type": "Procedure", "version": "1.0", "effective_date": "2026-07-25", "purpose": "承認後に改善タスクを登録する手順"},
     ]
 
 
 def create_document_catalog_files() -> None:
     docs = get_document_catalog()
     write_csv(META_DIR / "document_catalog.csv", docs)
+    from prepare_public_release import NAMES as ascii_pdf_names
+    write_csv(
+        META_DIR / "document_pdf_mapping.csv",
+        [
+            {"document_id": doc["document_id"],
+             "ascii_pdf_file_name": ascii_pdf_names[doc["file_name"]]}
+            for doc in docs
+        ],
+    )
     terms = [
         {"term": "Waveform Arena", "synonyms": "STG-WA|ウェーブフォーム・アリーナ", "definition": "DJ主体の半屋内ステージ"},
         {"term": "DJ Link Network", "synonyms": "DJリンク|同期ネットワーク", "definition": "DJプレイヤー、ミキサー、管理端末を接続する専用ネットワーク"},
@@ -2085,7 +2094,7 @@ def create_manifest() -> None:
         if not path.is_file() or path.name == "file_manifest.csv" or "_smoke" in path.name:
             continue
         rel = path.relative_to(ROOT).as_posix()
-        if any(part.startswith("_") for part in Path(rel).parts) or "__pycache__" in Path(rel).parts:
+        if any(part.startswith(("_", ".")) for part in Path(rel).parts) or "__pycache__" in Path(rel).parts:
             continue
         digest = hashlib.sha256(path.read_bytes()).hexdigest()
         include = (

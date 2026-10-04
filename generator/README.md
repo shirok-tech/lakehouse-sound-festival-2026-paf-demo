@@ -15,6 +15,7 @@ python generate_data.py
 ```
 
 乱数シードは`20260807`で固定されています。再生成後も、公開前に必ず`../scripts/validate_dataset.py`を実行して固定シナリオ値が維持されていることを確認してください。
+Document Catalogは日本語PDF名を保持し、同時に生成する`metadata/document_pdf_mapping.csv`がDocument IDごとのRAG用ASCII名を記録します。Ontology続編の検証には`../scripts/validate_ontology.py`も実行してください。
 
 ## 3. PDF原稿生成
 
